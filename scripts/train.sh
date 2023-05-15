@@ -8,7 +8,7 @@ configs=$base/configs
 
 mkdir -p $models
 
-num_threads=4
+num_threads=8
 #device=0
 
 # measure time
@@ -17,7 +17,7 @@ SECONDS=0
 
 logs=$base/logs
 
-model_name=deen_transformer_regular_2
+model_name=deen_transformer_post_norm
 
 mkdir -p $logs
 

@@ -1,343 +1,0 @@
-2023-05-12 17:04:36,064 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
-2023-05-12 17:04:36,064 - INFO - joeynmt.helpers -                           cfg.name : deen_transformer_pre
-2023-05-12 17:04:36,065 - INFO - joeynmt.helpers -                cfg.joeynmt_version : 2.0.0
-2023-05-12 17:04:36,065 - INFO - joeynmt.helpers -                     cfg.data.train : data/train
-2023-05-12 17:04:36,065 - INFO - joeynmt.helpers -                       cfg.data.dev : data/dev
-2023-05-12 17:04:36,065 - INFO - joeynmt.helpers -                      cfg.data.test : data/test
-2023-05-12 17:04:36,065 - INFO - joeynmt.helpers -              cfg.data.dataset_type : plain
-2023-05-12 17:04:36,065 - INFO - joeynmt.helpers -                  cfg.data.src.lang : de
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -             cfg.data.src.lowercase : False
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -                 cfg.data.src.level : bpe
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -             cfg.data.src.voc_limit : 32000
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -          cfg.data.src.voc_min_freq : 1
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -            cfg.data.src.max_length : 100
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -              cfg.data.src.voc_file : shared_models/joint-vocab.txt
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -        cfg.data.src.tokenizer_type : subword-nmt
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers - cfg.data.src.tokenizer_cfg.pretokenizer : none
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers - cfg.data.src.tokenizer_cfg.num_merges : 3200
-2023-05-12 17:04:36,075 - INFO - joeynmt.helpers -   cfg.data.src.tokenizer_cfg.codes : data/codes3200.bpe
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -                  cfg.data.trg.lang : en
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -             cfg.data.trg.lowercase : False
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -                 cfg.data.trg.level : bpe
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -             cfg.data.trg.voc_limit : 32000
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -          cfg.data.trg.voc_min_freq : 1
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -            cfg.data.trg.max_length : 100
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -              cfg.data.trg.voc_file : shared_models/joint-vocab.txt
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -        cfg.data.trg.tokenizer_type : subword-nmt
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers - cfg.data.trg.tokenizer_cfg.pretokenizer : none
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers - cfg.data.trg.tokenizer_cfg.num_merges : 3200
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -   cfg.data.trg.tokenizer_cfg.codes : data/codes3200.bpe
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -              cfg.testing.beam_size : 5
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -             cfg.testing.beam_alpha : 1.0
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -           cfg.training.random_seed : 42
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -             cfg.training.optimizer : adam
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -         cfg.training.normalization : tokens
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -         cfg.training.learning_rate : 0.0003
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -            cfg.training.batch_size : 2048
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -            cfg.training.batch_type : token
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -       cfg.training.eval_batch_size : 1024
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -       cfg.training.eval_batch_type : token
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -            cfg.training.scheduling : plateau
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -              cfg.training.patience : 8
-2023-05-12 17:04:36,076 - INFO - joeynmt.helpers -          cfg.training.weight_decay : 0.0
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -       cfg.training.decrease_factor : 0.7
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : ppl
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -                cfg.training.epochs : 10
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -       cfg.training.validation_freq : 500
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -          cfg.training.logging_freq : 100
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -           cfg.training.eval_metric : ['bleu']
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -             cfg.training.model_dir : models/deen_transformer_pre
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -             cfg.training.overwrite : False
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -               cfg.training.shuffle : True
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -              cfg.training.use_cuda : False
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -     cfg.training.max_output_length : 100
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -     cfg.training.print_valid_sents : [0, 1, 2, 3, 4]
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -       cfg.training.label_smoothing : 0.3
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -              cfg.model.initializer : xavier_uniform
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -         cfg.model.bias_initializer : zeros
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -                cfg.model.init_gain : 1.0
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -        cfg.model.embed_initializer : xavier_uniform
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -          cfg.model.embed_init_gain : 1.0
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -          cfg.model.tied_embeddings : True
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -             cfg.model.tied_softmax : True
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -             cfg.model.encoder.type : transformer
-2023-05-12 17:04:36,077 - INFO - joeynmt.helpers -       cfg.model.encoder.num_layers : 4
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -        cfg.model.encoder.num_heads : 2
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 256
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : True
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.dropout : 0
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -      cfg.model.encoder.hidden_size : 256
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -          cfg.model.encoder.ff_size : 512
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -          cfg.model.encoder.dropout : 0
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -             cfg.model.decoder.type : transformer
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -       cfg.model.decoder.num_layers : 1
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -        cfg.model.decoder.num_heads : 2
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 256
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : True
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.dropout : 0
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -      cfg.model.decoder.hidden_size : 256
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -          cfg.model.decoder.ff_size : 512
-2023-05-12 17:04:36,078 - INFO - joeynmt.helpers -          cfg.model.decoder.dropout : 0
-2023-05-12 17:04:36,083 - INFO - joeynmt.data - Building tokenizer...
-2023-05-12 17:04:36,111 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, 100), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
-2023-05-12 17:04:36,111 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, 100), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
-2023-05-12 17:04:36,111 - INFO - joeynmt.data - Loading train set...
-2023-05-12 17:04:36,507 - INFO - joeynmt.data - Building vocabulary...
-2023-05-12 17:04:36,691 - INFO - joeynmt.data - Loading dev set...
-2023-05-12 17:04:36,708 - INFO - joeynmt.data - Loading test set...
-2023-05-12 17:04:36,733 - INFO - joeynmt.data - Data loaded.
-2023-05-12 17:04:36,733 - INFO - joeynmt.data - Train dataset: PlaintextDataset(split=train, len=100000, src_lang=de, trg_lang=en, has_trg=True, random_subset=-1)
-2023-05-12 17:04:36,733 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=500, src_lang=de, trg_lang=en, has_trg=True, random_subset=-1)
-2023-05-12 17:04:36,733 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=2999, src_lang=de, trg_lang=en, has_trg=True, random_subset=-1)
-2023-05-12 17:04:36,735 - INFO - joeynmt.data - First training example:
-	[SRC] gem@@ ä@@ ß der vom Europäischen Parlament und von der gesam@@ ten Europäischen Union n@@ un@@ mehr ständi@@ g ver@@ tre@@ ten@@ en Lin@@ ie möchte ich Sie jedoch bit@@ ten , den gan@@ zen Ein@@ f@@ lu@@ ß Ih@@ res Am@@ tes und der Institu@@ tion , die Sie ver@@ treten , bei dem Prä@@ sident@@ schaf@@ ts@@ kan@@ di@@ d@@ aten und G@@ ou@@ ver@@ ne@@ ur von Tex@@ as , Ge@@ or@@ ge W@@ . B@@ us@@ h , der zur Aus@@ setzung der V@@ oll@@ stre@@ ck@@ ung des To@@ des@@ ur@@ teil@@ s und zur Be@@ gn@@ a@@ di@@ gung des Ver@@ ur@@ teil@@ ten be@@ fu@@ gt ist , gel@@ ten@@ d zu machen .
-	[TRG] however , I would ask you , in acc@@ ord@@ ance with the line which is now con@@ st@@ ant@@ ly fol@@ low@@ ed by the European Parliament and by the whole of the European Community , to make represent@@ ations , using the wei@@ ght of your pres@@ ti@@ gi@@ ous off@@ ice and the institu@@ tion you re@@ present , to the President and to the Go@@ vern@@ or of Tex@@ as , Mr B@@ us@@ h , who has the power to order a stay of ex@@ ec@@ ution and to re@@ pri@@ e@@ ve the con@@ dem@@ ned per@@ son .
-2023-05-12 17:04:36,735 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) the (7) in (8) die (9) der
-2023-05-12 17:04:36,735 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) the (7) in (8) die (9) der
-2023-05-12 17:04:36,736 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4117
-2023-05-12 17:04:36,736 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4117
-2023-05-12 17:04:36,768 - INFO - joeynmt.model - Building an encoder-decoder model...
-2023-05-12 17:04:36,870 - INFO - joeynmt.model - Enc-dec model built.
-2023-05-12 17:04:36,887 - INFO - joeynmt.model - Total params: 3953152
-2023-05-12 17:04:36,888 - INFO - joeynmt.training - Model(
-	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
-	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
-	src_embed=Embeddings(embedding_dim=256, vocab_size=4117),
-	trg_embed=Embeddings(embedding_dim=256, vocab_size=4117),
-	loss_function=XentLoss(criterion=KLDivLoss(), smoothing=0.3))
-2023-05-12 17:04:36,890 - INFO - joeynmt.builders - Adam(lr=0.0003, weight_decay=0.0, betas=(0.9, 0.999))
-2023-05-12 17:04:36,890 - INFO - joeynmt.builders - ReduceLROnPlateau(mode=min, verbose=False, threshold_mode=abs, eps=0.0, factor=0.7, patience=8)
-2023-05-12 17:04:36,890 - INFO - joeynmt.training - Train stats:
-	device: cpu
-	n_gpu: 0
-	16-bits training: False
-	gradient accumulation: 1
-	batch size per device: 2048
-	effective batch size (w. parallel & accumulation): 2048
-2023-05-12 17:04:36,890 - INFO - joeynmt.training - EPOCH 1
-2023-05-12 17:05:43,596 - INFO - joeynmt.training - Epoch   1, Step:      100, Batch Loss:     4.264925, Batch Acc: 0.052130, Tokens per Sec:     1380, Lr: 0.000300
-2023-05-12 17:06:49,986 - INFO - joeynmt.training - Epoch   1, Step:      200, Batch Loss:     4.156983, Batch Acc: 0.081692, Tokens per Sec:     1389, Lr: 0.000300
-2023-05-12 17:07:57,036 - INFO - joeynmt.training - Epoch   1, Step:      300, Batch Loss:     4.077490, Batch Acc: 0.091629, Tokens per Sec:     1380, Lr: 0.000300
-2023-05-12 17:09:04,498 - INFO - joeynmt.training - Epoch   1, Step:      400, Batch Loss:     3.937676, Batch Acc: 0.093580, Tokens per Sec:     1359, Lr: 0.000300
-2023-05-12 17:10:11,679 - INFO - joeynmt.training - Epoch   1, Step:      500, Batch Loss:     3.873990, Batch Acc: 0.100362, Tokens per Sec:     1381, Lr: 0.000300
-2023-05-12 17:10:11,679 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:09<02:52,  2.75it/s]Predicting...:   9%|▊         | 43/500 [00:23<04:28,  1.70it/s]Predicting...:  12%|█▏        | 62/500 [00:34<04:15,  1.71it/s]Predicting...:  16%|█▋        | 82/500 [00:44<03:54,  1.79it/s]Predicting...:  21%|██        | 105/500 [00:53<03:12,  2.06it/s]Predicting...:  25%|██▌       | 126/500 [01:01<02:50,  2.20it/s]Predicting...:  30%|██▉       | 149/500 [01:09<02:27,  2.38it/s]Predicting...:  33%|███▎      | 165/500 [01:22<02:51,  1.96it/s]Predicting...:  36%|███▌      | 181/500 [01:34<03:06,  1.71it/s]Predicting...:  40%|████      | 201/500 [01:42<02:33,  1.95it/s]Predicting...:  44%|████▍     | 222/500 [01:50<02:13,  2.09it/s]Predicting...:  50%|████▉     | 248/500 [01:56<01:36,  2.60it/s]Predicting...:  54%|█████▍    | 272/500 [02:02<01:17,  2.96it/s]Predicting...:  59%|█████▉    | 297/500 [02:10<01:06,  3.05it/s]Predicting...:  63%|██████▎   | 317/500 [02:16<01:00,  3.03it/s]Predicting...:  69%|██████▉   | 346/500 [02:24<00:47,  3.25it/s]Predicting...:  73%|███████▎  | 366/500 [02:36<00:51,  2.61it/s]Predicting...:  80%|████████  | 400/500 [02:42<00:30,  3.32it/s]Predicting...:  86%|████████▌ | 429/500 [02:49<00:20,  3.53it/s]Predicting...:  89%|████████▉ | 447/500 [03:00<00:19,  2.76it/s]Predicting...:  93%|█████████▎| 465/500 [03:08<00:13,  2.67it/s]Predicting...:  97%|█████████▋| 486/500 [03:20<00:06,  2.33it/s]Predicting...: 100%|██████████| 500/500 [03:24<00:00,  2.49it/s]Predicting...: 100%|██████████| 500/500 [03:24<00:00,  2.45it/s]
-2023-05-12 17:13:36,170 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   4.03, ppl:  56.07, acc:   0.09, generation: 204.4670[sec], evaluation: 0.0000[sec]
-2023-05-12 17:13:36,171 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
-2023-05-12 17:13:36,327 - INFO - joeynmt.training - Example #0
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - 	Hypothesis: the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - Example #1
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - 	Hypothesis: the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-2023-05-12 17:13:36,328 - INFO - joeynmt.training - Example #2
-2023-05-12 17:13:36,329 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
-2023-05-12 17:13:36,329 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
-2023-05-12 17:13:36,329 - INFO - joeynmt.training - 	Hypothesis: the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-2023-05-12 17:13:36,329 - INFO - joeynmt.training - Example #3
-2023-05-12 17:13:36,330 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
-2023-05-12 17:13:36,330 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
-2023-05-12 17:13:36,330 - INFO - joeynmt.training - 	Hypothesis: the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-2023-05-12 17:13:36,330 - INFO - joeynmt.training - Example #4
-2023-05-12 17:13:36,330 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
-2023-05-12 17:13:36,330 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
-2023-05-12 17:13:36,331 - INFO - joeynmt.training - 	Hypothesis: the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-2023-05-12 17:14:46,471 - INFO - joeynmt.training - Epoch   1, Step:      600, Batch Loss:     3.856641, Batch Acc: 0.101738, Tokens per Sec:     1335, Lr: 0.000300
-2023-05-12 17:15:54,147 - INFO - joeynmt.training - Epoch   1, Step:      700, Batch Loss:     3.752663, Batch Acc: 0.105162, Tokens per Sec:     1367, Lr: 0.000300
-2023-05-12 17:16:59,679 - INFO - joeynmt.training - Epoch   1, Step:      800, Batch Loss:     3.743876, Batch Acc: 0.106864, Tokens per Sec:     1398, Lr: 0.000300
-2023-05-12 17:18:06,834 - INFO - joeynmt.training - Epoch   1, Step:      900, Batch Loss:     3.613549, Batch Acc: 0.109517, Tokens per Sec:     1353, Lr: 0.000300
-2023-05-12 17:19:13,489 - INFO - joeynmt.training - Epoch   1, Step:     1000, Batch Loss:     3.604950, Batch Acc: 0.110016, Tokens per Sec:     1410, Lr: 0.000300
-2023-05-12 17:19:13,489 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:11<03:36,  2.19it/s]Predicting...:   9%|▊         | 43/500 [00:18<03:10,  2.40it/s]Predicting...:  12%|█▏        | 62/500 [00:31<03:54,  1.87it/s]Predicting...:  16%|█▋        | 82/500 [00:42<03:48,  1.83it/s]Predicting...:  21%|██        | 105/500 [00:52<03:17,  2.00it/s]Predicting...:  25%|██▌       | 126/500 [01:03<03:09,  1.97it/s]Predicting...:  30%|██▉       | 149/500 [01:12<02:46,  2.11it/s]Predicting...:  33%|███▎      | 165/500 [01:24<03:00,  1.86it/s]Predicting...:  36%|███▌      | 181/500 [01:35<03:06,  1.71it/s]Predicting...:  40%|████      | 201/500 [01:43<02:34,  1.94it/s]Predicting...:  44%|████▍     | 222/500 [01:52<02:18,  2.01it/s]Predicting...:  50%|████▉     | 248/500 [01:59<01:41,  2.48it/s]Predicting...:  54%|█████▍    | 272/500 [02:05<01:20,  2.83it/s]Predicting...:  59%|█████▉    | 297/500 [02:14<01:13,  2.75it/s]Predicting...:  63%|██████▎   | 317/500 [02:21<01:04,  2.83it/s]Predicting...:  69%|██████▉   | 346/500 [02:29<00:49,  3.11it/s]Predicting...:  73%|███████▎  | 366/500 [02:40<00:51,  2.60it/s]Predicting...:  80%|████████  | 400/500 [02:43<00:27,  3.63it/s]Predicting...:  86%|████████▌ | 429/500 [02:51<00:19,  3.71it/s]Predicting...:  89%|████████▉ | 447/500 [03:05<00:20,  2.64it/s]Predicting...:  93%|█████████▎| 465/500 [03:11<00:13,  2.69it/s]Predicting...:  97%|█████████▋| 486/500 [03:22<00:05,  2.42it/s]Predicting...: 100%|██████████| 500/500 [03:26<00:00,  2.61it/s]Predicting...: 100%|██████████| 500/500 [03:26<00:00,  2.43it/s]
-2023-05-12 17:22:39,549 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.89, ppl:  48.93, acc:   0.09, generation: 206.0364[sec], evaluation: 0.0000[sec]
-2023-05-12 17:22:39,549 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
-2023-05-12 17:22:39,726 - INFO - joeynmt.training - Example #0
-2023-05-12 17:22:39,727 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
-2023-05-12 17:22:39,728 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
-2023-05-12 17:22:39,728 - INFO - joeynmt.training - 	Hypothesis: the SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-2023-05-12 17:22:39,728 - INFO - joeynmt.training - Example #1
-2023-05-12 17:22:39,728 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
-2023-05-12 17:22:39,729 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
-2023-05-12 17:22:39,729 - INFO - joeynmt.training - 	Hypothesis: the European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European ping .
-2023-05-12 17:22:39,729 - INFO - joeynmt.training - Example #2
-2023-05-12 17:22:39,729 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
-2023-05-12 17:22:39,730 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
-2023-05-12 17:22:39,730 - INFO - joeynmt.training - 	Hypothesis: I is the European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European President .
-2023-05-12 17:22:39,730 - INFO - joeynmt.training - Example #3
-2023-05-12 17:22:39,730 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
-2023-05-12 17:22:39,730 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
-2023-05-12 17:22:39,730 - INFO - joeynmt.training - 	Hypothesis: the Commission , the European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European ps .
-2023-05-12 17:22:39,731 - INFO - joeynmt.training - Example #4
-2023-05-12 17:22:39,731 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
-2023-05-12 17:22:39,731 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
-2023-05-12 17:22:39,731 - INFO - joeynmt.training - 	Hypothesis: the European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European ping .
-2023-05-12 17:23:49,382 - INFO - joeynmt.training - Epoch   1, Step:     1100, Batch Loss:     3.712909, Batch Acc: 0.112028, Tokens per Sec:     1316, Lr: 0.000300
-2023-05-12 17:24:54,833 - INFO - joeynmt.training - Epoch   1, Step:     1200, Batch Loss:     3.730227, Batch Acc: 0.116997, Tokens per Sec:     1415, Lr: 0.000300
-2023-05-12 17:26:01,780 - INFO - joeynmt.training - Epoch   1, Step:     1300, Batch Loss:     3.603581, Batch Acc: 0.119821, Tokens per Sec:     1374, Lr: 0.000300
-2023-05-12 17:27:08,457 - INFO - joeynmt.training - Epoch   1, Step:     1400, Batch Loss:     3.555620, Batch Acc: 0.127095, Tokens per Sec:     1373, Lr: 0.000300
-2023-05-12 17:28:15,394 - INFO - joeynmt.training - Epoch   1, Step:     1500, Batch Loss:     3.456301, Batch Acc: 0.139883, Tokens per Sec:     1359, Lr: 0.000300
-2023-05-12 17:28:15,394 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:12<03:46,  2.09it/s]Predicting...:   9%|▊         | 43/500 [00:25<04:47,  1.59it/s]Predicting...:  12%|█▏        | 62/500 [00:38<04:44,  1.54it/s]Predicting...:  16%|█▋        | 82/500 [00:50<04:19,  1.61it/s]Predicting...:  21%|██        | 105/500 [01:00<03:37,  1.82it/s]Predicting...:  25%|██▌       | 126/500 [01:10<03:15,  1.92it/s]Predicting...:  30%|██▉       | 149/500 [01:19<02:50,  2.06it/s]Predicting...:  33%|███▎      | 165/500 [01:32<03:09,  1.77it/s]Predicting...:  36%|███▌      | 181/500 [01:44<03:13,  1.65it/s]Predicting...:  40%|████      | 201/500 [01:50<02:33,  1.95it/s]Predicting...:  44%|████▍     | 222/500 [01:58<02:10,  2.13it/s]Predicting...:  50%|████▉     | 248/500 [02:03<01:34,  2.66it/s]Predicting...:  54%|█████▍    | 272/500 [02:09<01:14,  3.04it/s]Predicting...:  59%|█████▉    | 297/500 [02:17<01:06,  3.04it/s]Predicting...:  63%|██████▎   | 317/500 [02:24<01:00,  3.04it/s]Predicting...:  69%|██████▉   | 346/500 [02:32<00:47,  3.25it/s]Predicting...:  73%|███████▎  | 366/500 [02:44<00:52,  2.57it/s]Predicting...:  80%|████████  | 400/500 [02:51<00:31,  3.17it/s]Predicting...:  86%|████████▌ | 429/500 [02:58<00:21,  3.35it/s]Predicting...:  89%|████████▉ | 447/500 [03:10<00:19,  2.67it/s]Predicting...:  93%|█████████▎| 465/500 [03:17<00:13,  2.64it/s]Predicting...:  97%|█████████▋| 486/500 [03:27<00:05,  2.42it/s]Predicting...: 100%|██████████| 500/500 [03:31<00:00,  2.59it/s]Predicting...: 100%|██████████| 500/500 [03:31<00:00,  2.36it/s]
-2023-05-12 17:31:47,389 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.73, ppl:  41.50, acc:   0.12, generation: 211.9776[sec], evaluation: 0.0000[sec]
-2023-05-12 17:31:47,389 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
-2023-05-12 17:31:47,591 - INFO - joeynmt.training - Example #0
-2023-05-12 17:31:47,592 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
-2023-05-12 17:31:47,592 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
-2023-05-12 17:31:47,592 - INFO - joeynmt.training - 	Hypothesis: the reppppppppppppps .
-2023-05-12 17:31:47,592 - INFO - joeynmt.training - Example #1
-2023-05-12 17:31:47,593 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
-2023-05-12 17:31:47,593 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
-2023-05-12 17:31:47,593 - INFO - joeynmt.training - 	Hypothesis: the repent of the repent of the repyyya , and the repyyyya , and the repent of the repccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-2023-05-12 17:31:47,593 - INFO - joeynmt.training - Example #2
-2023-05-12 17:31:47,594 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
-2023-05-12 17:31:47,594 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
-2023-05-12 17:31:47,594 - INFO - joeynmt.training - 	Hypothesis: the reported of the reppent of the repent of the repasing of the reppppppppppppppppent .
-2023-05-12 17:31:47,594 - INFO - joeynmt.training - Example #3
-2023-05-12 17:31:47,595 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
-2023-05-12 17:31:47,595 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
-2023-05-12 17:31:47,595 - INFO - joeynmt.training - 	Hypothesis: the European Union of the European Union of the European Union of the European Union of the European Union .
-2023-05-12 17:31:47,595 - INFO - joeynmt.training - Example #4
-2023-05-12 17:31:47,596 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
-2023-05-12 17:31:47,596 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
-2023-05-12 17:31:47,596 - INFO - joeynmt.training - 	Hypothesis: the European Union of the European Union of the European Union of the European Union of the European Union of the European Union of the European Union .
-2023-05-12 17:33:02,754 - INFO - joeynmt.training - Epoch   1, Step:     1600, Batch Loss:     3.447572, Batch Acc: 0.152036, Tokens per Sec:     1239, Lr: 0.000300
-2023-05-12 17:34:17,699 - INFO - joeynmt.training - Epoch   1, Step:     1700, Batch Loss:     3.331259, Batch Acc: 0.170533, Tokens per Sec:     1214, Lr: 0.000300
-2023-05-12 17:35:31,097 - INFO - joeynmt.training - Epoch   1, Step:     1800, Batch Loss:     3.287587, Batch Acc: 0.183691, Tokens per Sec:     1249, Lr: 0.000300
-2023-05-12 17:36:36,705 - INFO - joeynmt.training - Epoch   1, Step:     1900, Batch Loss:     3.156572, Batch Acc: 0.194487, Tokens per Sec:     1402, Lr: 0.000300
-2023-05-12 17:37:52,803 - INFO - joeynmt.training - Epoch   1, Step:     2000, Batch Loss:     3.049334, Batch Acc: 0.203042, Tokens per Sec:     1202, Lr: 0.000300
-2023-05-12 17:37:52,804 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:05<01:45,  4.49it/s]Predicting...:   9%|▊         | 43/500 [00:09<01:40,  4.53it/s]Predicting...:  12%|█▏        | 62/500 [00:13<01:31,  4.81it/s]Predicting...:  16%|█▋        | 82/500 [00:24<02:26,  2.85it/s]Predicting...:  21%|██        | 105/500 [00:36<02:44,  2.41it/s]Predicting...:  25%|██▌       | 126/500 [00:48<02:53,  2.15it/s]Predicting...:  30%|██▉       | 149/500 [00:55<02:28,  2.37it/s]Predicting...:  33%|███▎      | 165/500 [01:11<03:07,  1.79it/s]Predicting...:  36%|███▌      | 181/500 [01:25<03:28,  1.53it/s]Predicting...:  40%|████      | 201/500 [01:33<02:51,  1.75it/s]Predicting...:  44%|████▍     | 222/500 [01:44<02:31,  1.83it/s]Predicting...:  50%|████▉     | 248/500 [01:50<01:48,  2.33it/s]Predicting...:  54%|█████▍    | 272/500 [01:56<01:24,  2.69it/s]Predicting...:  59%|█████▉    | 297/500 [02:00<01:02,  3.25it/s]Predicting...:  63%|██████▎   | 317/500 [02:05<00:54,  3.37it/s]Predicting...:  69%|██████▉   | 346/500 [02:11<00:39,  3.90it/s]Predicting...:  73%|███████▎  | 366/500 [02:23<00:46,  2.88it/s]Predicting...:  80%|████████  | 400/500 [02:29<00:28,  3.57it/s]Predicting...:  86%|████████▌ | 429/500 [02:35<00:17,  3.96it/s]Predicting...:  89%|████████▉ | 447/500 [02:39<00:13,  4.04it/s]Predicting...:  93%|█████████▎| 465/500 [02:44<00:09,  3.79it/s]Predicting...:  97%|█████████▋| 486/500 [02:52<00:04,  3.41it/s]Predicting...: 100%|██████████| 500/500 [02:57<00:00,  3.33it/s]Predicting...: 100%|██████████| 500/500 [02:57<00:00,  2.82it/s]
-2023-05-12 17:40:49,940 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.41, ppl:  30.40, acc:   0.16, generation: 177.1161[sec], evaluation: 0.0000[sec]
-2023-05-12 17:40:49,941 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
-2023-05-12 17:40:50,127 - INFO - joeynmt.training - Example #0
-2023-05-12 17:40:50,128 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
-2023-05-12 17:40:50,128 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
-2023-05-12 17:40:50,128 - INFO - joeynmt.training - 	Hypothesis: the Sala , the bourt of the ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssa .
-2023-05-12 17:40:50,128 - INFO - joeynmt.training - Example #1
-2023-05-12 17:40:50,128 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
-2023-05-12 17:40:50,129 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
-2023-05-12 17:40:50,129 - INFO - joeynmt.training - 	Hypothesis: the Sya , the Sya , the Saaaware of the Cyyyyyyle , and the remove the rest of the cyyle of the rest of the cyyyers of the slilililililililililililililililililililililies .
-2023-05-12 17:40:50,129 - INFO - joeynmt.training - Example #2
-2023-05-12 17:40:50,129 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - 	Hypothesis: Mr President , the first of the consequences of the EU , the EU , the EU is a very very very important to the EU is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very to the remove .
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - Example #3
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - 	Hypothesis: the first of the first of the EU is a good time .
-2023-05-12 17:40:50,130 - INFO - joeynmt.training - Example #4
-2023-05-12 17:40:50,131 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
-2023-05-12 17:40:50,131 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
-2023-05-12 17:40:50,131 - INFO - joeynmt.training - 	Hypothesis: the EU is the consequences of the remotion of the EU , the EU , and the EU , and the EU .
-2023-05-12 17:42:04,301 - INFO - joeynmt.training - Epoch   1, Step:     2100, Batch Loss:     3.031288, Batch Acc: 0.207596, Tokens per Sec:     1237, Lr: 0.000300
-2023-05-12 17:43:17,187 - INFO - joeynmt.training - Epoch   1, Step:     2200, Batch Loss:     3.042876, Batch Acc: 0.213111, Tokens per Sec:     1253, Lr: 0.000300
-2023-05-12 17:44:31,468 - INFO - joeynmt.training - Epoch   1, Step:     2300, Batch Loss:     3.154395, Batch Acc: 0.215966, Tokens per Sec:     1228, Lr: 0.000300
-2023-05-12 17:45:45,788 - INFO - joeynmt.training - Epoch   1, Step:     2400, Batch Loss:     3.029867, Batch Acc: 0.228095, Tokens per Sec:     1208, Lr: 0.000300
-2023-05-12 17:46:57,822 - INFO - joeynmt.training - Epoch   1, Step:     2500, Batch Loss:     2.994113, Batch Acc: 0.228659, Tokens per Sec:     1250, Lr: 0.000300
-2023-05-12 17:46:57,822 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:07<02:19,  3.41it/s]Predicting...:   9%|▊         | 43/500 [00:20<03:50,  1.98it/s]Predicting...:  12%|█▏        | 62/500 [00:34<04:26,  1.64it/s]Predicting...:  16%|█▋        | 82/500 [00:46<04:15,  1.64it/s]Predicting...:  21%|██        | 105/500 [00:56<03:36,  1.82it/s]Predicting...:  25%|██▌       | 126/500 [01:08<03:26,  1.81it/s]Predicting...:  30%|██▉       | 149/500 [01:17<02:53,  2.03it/s]Predicting...:  33%|███▎      | 165/500 [01:32<03:21,  1.66it/s]Predicting...:  36%|███▌      | 181/500 [01:35<02:37,  2.03it/s]Predicting...:  40%|████      | 201/500 [01:42<02:14,  2.23it/s]Predicting...:  44%|████▍     | 222/500 [01:52<02:10,  2.14it/s]Predicting...:  50%|████▉     | 248/500 [01:59<01:38,  2.56it/s]Predicting...:  54%|█████▍    | 272/500 [02:05<01:16,  2.97it/s]Predicting...:  59%|█████▉    | 297/500 [02:12<01:06,  3.04it/s]Predicting...:  63%|██████▎   | 317/500 [02:18<00:58,  3.13it/s]Predicting...:  69%|██████▉   | 346/500 [02:26<00:46,  3.33it/s]Predicting...:  73%|███████▎  | 366/500 [02:38<00:50,  2.65it/s]Predicting...:  80%|████████  | 400/500 [02:45<00:30,  3.25it/s]Predicting...:  86%|████████▌ | 429/500 [02:52<00:20,  3.40it/s]Predicting...:  89%|████████▉ | 447/500 [03:06<00:20,  2.53it/s]Predicting...:  93%|█████████▎| 465/500 [03:10<00:12,  2.81it/s]Predicting...:  97%|█████████▋| 486/500 [03:20<00:05,  2.54it/s]Predicting...: 100%|██████████| 500/500 [03:25<00:00,  2.61it/s]Predicting...: 100%|██████████| 500/500 [03:25<00:00,  2.43it/s]
-2023-05-12 17:50:23,459 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.28, ppl:  26.53, acc:   0.18, generation: 205.6243[sec], evaluation: 0.0000[sec]
-2023-05-12 17:50:23,460 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
-2023-05-12 17:50:23,645 - INFO - joeynmt.training - Example #0
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - 	Hypothesis: the Calalalalong and the bource of the bource of the Calalalalalalong .
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - Example #1
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - 	Hypothesis: the Cana , the Cana , the Cana , the Cana , the Cana , the Cololololation of the Cololololation of the Colololation of the Cololololation of the Cololololence of the Cololololololence of the Clya .
-2023-05-12 17:50:23,646 - INFO - joeynmt.training - Example #2
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - 	Hypothesis: Mr President , the Cana &apos;s concontracts of the most of the most important of the European Union , the most important of the world , the most important of the world .
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - Example #3
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - 	Hypothesis: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS.
-2023-05-12 17:50:23,647 - INFO - joeynmt.training - Example #4
-2023-05-12 17:50:23,648 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
-2023-05-12 17:50:23,648 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
-2023-05-12 17:50:23,648 - INFO - joeynmt.training - 	Hypothesis: the European Union is the European Union , the European Union &apos;s proposal on the European Union .
-2023-05-12 17:51:31,393 - INFO - joeynmt.training - Epoch   1, Step:     2600, Batch Loss:     2.875421, Batch Acc: 0.234446, Tokens per Sec:     1361, Lr: 0.000300
-2023-05-12 17:52:35,988 - INFO - joeynmt.training - Epoch   1, Step:     2700, Batch Loss:     2.922549, Batch Acc: 0.237796, Tokens per Sec:     1431, Lr: 0.000300
-2023-05-12 17:53:50,125 - INFO - joeynmt.training - Epoch   1, Step:     2800, Batch Loss:     2.921706, Batch Acc: 0.237599, Tokens per Sec:     1241, Lr: 0.000300
-2023-05-12 17:55:09,351 - INFO - joeynmt.training - Epoch   1, Step:     2900, Batch Loss:     2.912213, Batch Acc: 0.245428, Tokens per Sec:     1153, Lr: 0.000300
-2023-05-12 17:56:26,676 - INFO - joeynmt.training - Epoch   1, Step:     3000, Batch Loss:     2.768331, Batch Acc: 0.248128, Tokens per Sec:     1192, Lr: 0.000300
-2023-05-12 17:56:26,677 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:25,  5.52it/s]Predicting...:   9%|▊         | 43/500 [00:08<01:29,  5.09it/s]Predicting...:  12%|█▏        | 62/500 [00:20<02:55,  2.50it/s]Predicting...:  16%|█▋        | 82/500 [00:31<03:06,  2.24it/s]Predicting...:  21%|██        | 105/500 [00:34<02:09,  3.04it/s]Predicting...:  25%|██▌       | 126/500 [00:45<02:29,  2.51it/s]Predicting...:  30%|██▉       | 149/500 [00:50<01:54,  3.07it/s]Predicting...:  33%|███▎      | 165/500 [01:05<02:40,  2.08it/s]Predicting...:  36%|███▌      | 181/500 [01:08<02:09,  2.45it/s]Predicting...:  40%|████      | 201/500 [01:16<02:02,  2.45it/s]Predicting...:  44%|████▍     | 222/500 [01:25<01:55,  2.40it/s]Predicting...:  50%|████▉     | 248/500 [01:32<01:28,  2.84it/s]Predicting...:  54%|█████▍    | 272/500 [01:37<01:11,  3.21it/s]Predicting...:  59%|█████▉    | 297/500 [01:43<00:59,  3.39it/s]Predicting...:  63%|██████▎   | 317/500 [01:47<00:48,  3.81it/s]Predicting...:  69%|██████▉   | 346/500 [01:55<00:41,  3.75it/s]Predicting...:  73%|███████▎  | 366/500 [02:07<00:47,  2.81it/s]Predicting...:  80%|████████  | 400/500 [02:14<00:29,  3.38it/s]Predicting...:  86%|████████▌ | 429/500 [02:22<00:20,  3.41it/s]Predicting...:  89%|████████▉ | 447/500 [02:36<00:20,  2.56it/s]Predicting...:  93%|█████████▎| 465/500 [02:39<00:11,  2.94it/s]Predicting...:  97%|█████████▋| 486/500 [02:51<00:05,  2.46it/s]Predicting...: 100%|██████████| 500/500 [02:55<00:00,  2.57it/s]Predicting...: 100%|██████████| 500/500 [02:55<00:00,  2.84it/s]
-2023-05-12 17:59:22,506 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.19, ppl:  24.40, acc:   0.19, generation: 175.8071[sec], evaluation: 0.0000[sec]
-2023-05-12 17:59:22,507 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
-2023-05-12 17:59:22,684 - INFO - joeynmt.helpers - delete models/deen_transformer_pre/500.ckpt
-2023-05-12 17:59:22,713 - INFO - joeynmt.training - Example #0
-2023-05-12 17:59:22,714 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
-2023-05-12 17:59:22,714 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
-2023-05-12 17:59:22,714 - INFO - joeynmt.training - 	Hypothesis: the camic and the cames of the cames of the setting .
-2023-05-12 17:59:22,714 - INFO - joeynmt.training - Example #1
-2023-05-12 17:59:22,715 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
-2023-05-12 17:59:22,715 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
-2023-05-12 17:59:22,715 - INFO - joeynmt.training - 	Hypothesis: the Croroad of the Croroad of the CCChahahaps , the Chahasian , the Chahasian , and the Croroad of the Crounds of the Crorounds of the Crorounds of the Croroad of the SSSSSSSSSSSSSSSSSS.
-2023-05-12 17:59:22,715 - INFO - joeynmt.training - Example #2
-2023-05-12 17:59:22,716 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
-2023-05-12 17:59:22,716 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
-2023-05-12 17:59:22,717 - INFO - joeynmt.training - 	Hypothesis: Mr President , the Colololence of the world &apos;s backgroups of the world &apos;s world &apos;s backgroups of the world .
-2023-05-12 17:59:22,717 - INFO - joeynmt.training - Example #3
-2023-05-12 17:59:22,717 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
-2023-05-12 17:59:22,717 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
-2023-05-12 17:59:22,718 - INFO - joeynmt.training - 	Hypothesis: the same time , the same time , the same time , the same time .
-2023-05-12 17:59:22,718 - INFO - joeynmt.training - Example #4
-2023-05-12 17:59:22,718 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
-2023-05-12 17:59:22,719 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
-2023-05-12 17:59:22,719 - INFO - joeynmt.training - 	Hypothesis: the Commission &apos;s report is a very important of the Commission &apos;s report on the Committee on the Committee on the Committee on the Committee on the next item .
-2023-05-12 18:00:30,403 - INFO - joeynmt.training - Epoch   1, Step:     3100, Batch Loss:     2.824101, Batch Acc: 0.255289, Tokens per Sec:     1369, Lr: 0.000300
-2023-05-12 18:00:32,868 - INFO - joeynmt.model - Building an encoder-decoder model...
-2023-05-12 18:00:32,979 - INFO - joeynmt.model - Enc-dec model built.
-2023-05-12 18:00:33,027 - INFO - joeynmt.helpers - Load model from /mnt/c/Users/serai/Desktop/mt_2023_exercise_4/mt-exercise-4/models/deen_transformer_pre/3000.ckpt.
-2023-05-12 18:00:33,032 - INFO - joeynmt.prediction - Model(
-	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
-	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
-	src_embed=Embeddings(embedding_dim=256, vocab_size=4117),
-	trg_embed=Embeddings(embedding_dim=256, vocab_size=4117),
-	loss_function=None)
-2023-05-12 18:00:33,034 - INFO - joeynmt.prediction - Decoding on dev set...
-2023-05-12 18:00:33,034 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
-Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   0%|          | 0/500 [00:07<?, ?it/s]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
-    exec(code, run_globals)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/__main__.py", line 61, in <module>
-    main()
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/__main__.py", line 41, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/training.py", line 846, in train
-    test(
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/prediction.py", line 424, in test
-    _, _, hypotheses, hypotheses_raw, seq_scores, att_scores, = predict(
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/prediction.py", line 178, in predict
-    output, hyp_scores, attention_scores = search(
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/search.py", line 730, in search
-    stacked_output, stacked_scores, stacked_attention_scores = beam_search(
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/search.py", line 429, in beam_search
-    logits, _, _, _ = model(  # logits before final softmax
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/mt-exercise-4/venvs/torch3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/model.py", line 124, in forward
-    outputs, hidden, att_probs, att_vectors = self._decode(**kwargs)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/model.py", line 212, in _decode
-    return self.decoder(
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/mt-exercise-4/venvs/torch3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/decoders.py", line 582, in forward
-    x, att = layer(x=x,
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/mt-exercise-4/venvs/torch3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/transformer_layers.py", line 387, in forward
-    h2, att = self.src_trg_att(memory,
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/mt-exercise-4/venvs/torch3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/mnt/c/Users/serai/Desktop/mt_2023_exercise_4/joeynmt/joeynmt/transformer_layers.py", line 86, in forward
-    scores = torch.matmul(q, k.transpose(2, 3))
-KeyboardInterrupt
